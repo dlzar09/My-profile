@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="ckb" dir="rtl">
+
+<head>
+    <meta charset="utf-8">
+    <title>دڵزار پشتیوان جەلال | پسپۆڕی IT و سیستەمەکان</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="دڵزار پشتیوان جەلال، پسپۆڕی IT، سەرکردەی تیمی تەکنیکی، گەشەپێدەری Flutter، گەشەپێدەری Laravel" name="keywords">
+    <meta content="پۆرتفۆلیۆیەکی تاریک و کارلێککار بۆ دڵزار پشتیوان جەلال، پسپۆڕی IT و سیستەمەکان و سەرکردەی تیمی تەکنیکی." name="description">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&family=Noto+Sans+Arabic:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="import/assets/css/style.css" rel="stylesheet">
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="88">
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+    <!-- Navbar Start -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark luxury-nav px-lg-5">
+        <a href="#home" class="navbar-brand ml-lg-3 brand-mark">
+            <span class="brand-icon">D</span>
+            <span class="brand-text">دڵزار<span>.</span></span>
+        </a>
+
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse" aria-label="کردنەوەی مێنیو">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse px-lg-3" id="navbarCollapse">
+            <div class="navbar-nav m-auto py-3 py-lg-0">
+                <a href="#home" class="nav-item nav-link active">سەرەتا</a>
+                <a href="#signal" class="nav-item nav-link">سیگناڵ</a>
+                <a href="#about" class="nav-item nav-link">دەربارە</a>
+                <a href="#experience" class="nav-item nav-link">ئەزموون</a>
+                <a href="#projects" class="nav-item nav-link">پڕۆژەکان</a>
+                <a href="#skills" class="nav-item nav-link">تواناکان</a>
+                <a href="#contact" class="nav-item nav-link">پەیوەندی</a>
+            </div>
+            <div class="language-switch">
+                <a href="index.html" class="lang-link">EN</a>
+                <a href="index-ku.html" class="lang-link active">کوردی</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Hero Start -->
+    <header class="hero-section d-flex align-items-center" id="home">
+        <canvas id="signalCanvas" class="signal-canvas" aria-hidden="true"></canvas>
+        <div class="hero-noise"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-orb hero-orb-one"></div>
+        <div class="hero-orb hero-orb-two"></div>
+
+        <div class="container hero-content">
+            <div class="row align-items-center min-vh-100 py-5">
+                <div class="col-lg-7 text-center text-lg-right reveal">
+                    <span class="eyebrow eyebrow-smart"><i class="fa-solid fa-sparkles"></i> پۆرتفۆلیۆی تەکنیکی کارلێککار</span>
+                    <h1 class="hero-title">دڵزار پشتیوان جەلال</h1>
+                    <h2 class="hero-role">
+                        <span class="typed-text-output"></span>
+                        <span class="typed-text d-none">پسپۆڕی IT و سیستەمەکان, سەرکردەی تیمی تەکنیکی, گەشەپێدەری Full-Stack</span>
+                    </h2>
+                    <p class="hero-description">
+                        سیستەم دروست دەکەم، بڕیارە تەکنیکییەکان ڕێبەری دەکەم، و چارەسەری دیجیتاڵی دروست دەکەم کە کاروباری کۆمپانیا، ژێرخان و ئەزموونی بەکارهێنەر باشتر دەکات.
+                    </p>
+
+                    <div class="hero-actions d-flex flex-column flex-sm-row align-items-center justify-content-center justify-content-lg-end">
+                        <a href="import/assets/files/Dilzar_Pshtiwan_Jalal.pdf" class="btn btn-luxury ml-sm-3 mb-3 mb-sm-0" target="_blank" rel="noopener">
+                            <i class="fa-solid fa-file-arrow-down ml-2"></i> کردنەوەی CV
+                        </a>
+                        <a href="#projects" class="btn btn-ghost">
+                            <i class="fa-solid fa-diagram-project ml-2"></i> بینینی پڕۆژەکان
+                        </a>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div class="stat-card magnetic" data-tilt>
+                            <strong data-counter="4" data-suffix="">0</strong>
+                            <span>پڕۆژەی سەرەکی</span>
+                        </div>
+                        <div class="stat-card magnetic" data-tilt>
+                            <strong data-counter="3" data-suffix="">0</strong>
+                            <span>ڕۆڵی کاری</span>
+                        </div>
+                        <div class="stat-card magnetic" data-tilt>
+                            <strong data-counter="2" data-suffix="">0</strong>
+                            <span>پلەی پۆل</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 mt-5 mt-lg-0 reveal delay-1">
+                    <div class="smart-showcase mx-auto">
+                        <div class="smart-window glass-panel magnetic" data-tilt>
+                            <div class="window-top">
+                                <span></span><span></span><span></span>
+                            </div>
+
+                            <div class="smart-head">
+                                <div class="monogram">DP</div>
+                                <div>
+                                    <small>ناسنامەی سیستەم</small>
+                                    <h3>لۆژیکی مرۆڤانە، کۆدی پاک، بەهای ڕاستەقینەی بزنس.</h3>
+                                </div>
+                            </div>
+
+                            <div class="smart-code">
+                                <div><span class="code-key">role</span>: <span class="code-value">"پسپۆڕی IT و سیستەمەکان"</span></div>
+                                <div><span class="code-key">stack</span>: <span class="code-value">"Flutter + Laravel + MySQL"</span></div>
+                                <div><span class="code-key">edge</span>: <span class="code-value">"ڕێبەری + ژێرخان"</span></div>
+                                <div><span class="code-key">mission</span>: <span class="code-value">"کردنی کارکردنەکان بە زیرەکتر"</span></div>
+                            </div>
+
+                            <div class="stack-chips">
+                                <span>Flutter</span>
+                                <span>Laravel</span>
+                                <span>Linux</span>
+                                <span>Docker</span>
+                                <span>Meta Ads</span>
+                            </div>
+                        </div>
+
+                        <button class="command-hint" type="button" data-command-open>
+                            کلیلی <kbd>D</kbd> دابگرە بۆ Dilzar Mode
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a href="#signal" class="scroll-down" aria-label="چوون بۆ بەشی سیگناڵ">
+            <span></span>
+        </a>
+    </header>
+    <!-- Hero End -->
+
+    <!-- Signature Experience Start -->
+    <section class="section-padding section-muted section-signature" id="signal">
+        <div class="container">
+            <div class="section-heading text-center reveal">
+                <span class="section-kicker">سیستەمی سیگناڵ</span>
+                <h2>پۆرتفۆلیۆیەک کە وەک نەخشەیەکی تەکنیکی زیندوو کار دەکات.</h2>
+                <p class="section-subtext">
+                    بە هێواشی سکڕۆڵ بکە — پەڕەکە تواناکانت وەک سیستەمێک کە دەکرێتەوە پیشان دەدات.
+                </p>
+            </div>
+
+            <div class="signal-lab">
+                <div class="signal-core-wrap reveal">
+                    <div class="signal-ring ring-one"></div>
+                    <div class="signal-ring ring-two"></div>
+                    <div class="signal-ring ring-three"></div>
+                    <div class="signal-core glass-panel magnetic" data-tilt>
+                        <div class="core-monogram">DP</div>
+                        <h3>کۆد + سیستەم + ڕێبەری</h3>
+                        <p>تێکەڵەیەکی تایبەت لە بیرکردنەوەی گەشەپێدەر، ژێرخانی IT، کارکردنی دیجیتاڵ و هەماهەنگی تیم.</p>
+                    </div>
+                </div>
+
+                <div class="signal-node node-top-left glass-panel reveal magnetic" data-tilt>
+                    <span class="node-tag">01</span>
+                    <h4>بڕیاری تەکنیکیی ستراتیژی</h4>
+                    <p>هەڵبژاردنی سیستەمی باشتر، گۆڕینی ڕێکاری کۆن، و باشترکردنی کاریگەری کارکردن.</p>
+                </div>
+
+                <div class="signal-node node-top-right glass-panel reveal delay-1 magnetic" data-tilt>
+                    <span class="node-tag">02</span>
+                    <h4>گەشەپێدانی هۆشیار بە بزنس</h4>
+                    <p>دروستکردنی ئامرازی ناوخۆیی کە کێشەی ڕاستەقینەی کۆمپانیا چارەسەر دەکات، نەک تەنها ڕووکارێکی جوان.</p>
+                </div>
+
+                <div class="signal-node node-bottom-left glass-panel reveal delay-2 magnetic" data-tilt>
+                    <span class="node-tag">03</span>
+                    <h4>پشتگیری و جێگیری ژێرخان</h4>
+                    <p>تۆڕ، Linux، چاککردنەوەی هاردوێر، و بەڕێوەبردنی سیستەم بۆ جێگیری کاری ڕۆژانە.</p>
+                </div>
+
+                <div class="signal-node node-bottom-right glass-panel reveal delay-3 magnetic" data-tilt>
+                    <span class="node-tag">04</span>
+                    <h4>کارلێکی پیشەیی و جیاواز</h4>
+                    <p>وردەکاری کارلێککار، جووڵەی نەرم، و شتی بچووک و سەرسوڕهێنەر کە پۆرتفۆلیۆکە لەبیرنەکراو دەکات.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Signature Experience End -->
+
+    <!-- About Start -->
+    <section class="section-padding" id="about">
+        <div class="container">
+            <div class="section-heading text-center reveal">
+                <span class="section-kicker">دەربارە</span>
+                <h2>پسپۆڕی IT بە بیرکردنەوەی گەشەپێدەر و بەرپرسیاریەتیی ڕێبەر.</h2>
+            </div>
+
+            <div class="row align-items-stretch">
+                <div class="col-lg-5 mb-4 mb-lg-0 reveal">
+                    <div class="about-smart-card glass-panel h-100 magnetic" data-tilt>
+                        <div class="about-smart-header">
+                            <span class="section-kicker mb-3">وێنەیەکی خێرای پڕۆفایل</span>
+                            <h3>دروستبووم بۆ چارەسەرکردنی کێشەی تەکنیکی.</h3>
+                            <p>
+                                گەشەپێدانی نەرمەکاڵا، پشتگیری IT، تۆڕ، کارکردنی دیجیتاڵ و ڕێبەری تیم تێکەڵ دەکەم بۆ ئەوەی بزنسەکان بە نەرمتر کار بکەن.
+                            </p>
+                        </div>
+
+                        <div class="smart-feature-grid">
+                            <div class="smart-feature-item">
+                                <i class="fa-solid fa-sitemap"></i>
+                                <h4>بیرکردنەوەی سیستەمی</h4>
+                                <p>تێگەیشتن لەوەی ئامراز، کەسەکان و کارکردنەکان چۆن بەیەک دەبەسترێن.</p>
+                            </div>
+                            <div class="smart-feature-item">
+                                <i class="fa-solid fa-people-group"></i>
+                                <h4>ڕێبەری تیم</h4>
+                                <p>ڕێبەری کاری تەکنیکی و یارمەتیدانی تیم بۆ بڕیاری باشتر.</p>
+                            </div>
+                            <div class="smart-feature-item">
+                                <i class="fa-solid fa-server"></i>
+                                <h4>ژێرخان</h4>
+                                <p>Linux، تۆڕ، هاردوێر و پشتگیری تەکنیکی ڕۆژانە.</p>
+                            </div>
+                            <div class="smart-feature-item">
+                                <i class="fa-solid fa-rocket"></i>
+                                <h4>سەرنج لەسەر گەشە</h4>
+                                <p>هەموو ڕۆژێک فێردەبم و پڕۆژەی ڕاستەقینە بە ئامانج دروست دەکەم.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7 reveal delay-1">
+                    <div class="glass-panel about-panel h-100">
+                        <h3>پوختەی پیشەیی</h3>
+                        <p>
+                            پسپۆڕی IT و گەشەپێدەری Full-Stack کە توانای دروستکردنی سیستەم، بڕیاری تەکنیکی ستراتیژی، و جێبەجێکردنی چارەسەری نەرمەکاڵا بۆ گەشەی بزنس هەیە.
+                        </p>
+                        <p>
+                            من لە چارەسەرکردنی کێشەی ڕاستەقینە و هەماهەنگی هاوبەشییەکان بۆ باشترکردنی کارکردنەکان باش کار دەکەم. کارەکەم گەشەپێدانی Flutter و Laravel لەگەڵ ژێرخانی IT، تۆڕ، مارکێتینگی دیجیتاڵ و بەڕێوەبردنی سیستەم تێکەڵ دەکات.
+                        </p>
+
+                        <div class="info-grid">
+                            <div><span>ڕۆڵ</span><strong>پسپۆڕی IT و سیستەمەکان</strong></div>
+                            <div><span>ڕێبەری</span><strong>سەرکردەی تیمی تەکنیکی</strong></div>
+                            <div><span>شوێن</span><strong>کوردستان، هەولێر</strong></div>
+                            <div><span>ئیمەیڵ</span><strong>dlzarcr55@gmail.com</strong></div>
+                            <div><span>ژمارەی تەلەفۆن</span><strong>+964 750 735 4643</strong></div>
+                            <div><span>تەکنەلۆجیای سەرەکی</span><strong>Flutter، Laravel، MySQL</strong></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About End -->
+
+    <!-- Experience Start -->
+    <section class="section-padding section-muted" id="experience">
+        <div class="container">
+            <div class="section-heading text-center reveal">
+                <span class="section-kicker">ئەزموون</span>
+                <h2>کاری ڕاستەقینە، سیستەمی ڕاستەقینە، بەرپرسیاریەتیی ڕاستەقینە.</h2>
+            </div>
+
+            <div class="experience-track">
+                <article class="experience-card glass-panel reveal magnetic" data-tilt>
+                    <div class="experience-meta">
+                        <span>05/2025 – ئێستا</span>
+                        <strong>هەولێر</strong>
+                    </div>
+                    <h3>پسپۆڕی IT و سیستەمەکان</h3>
+                    <h4>Rawa Auto Auction</h4>
+                    <ul class="lux-list">
+                        <li>توێژینەوە و جێبەجێکردنی نەرمەکاڵای نوێی شوێنکەوتن بۆ باشترکردنی کاریگەری کارکردن.</li>
+                        <li>ئامرازی ناوخۆیی دروستکرد وەک Shipping Calculator و سیستەمی بەڕێوەبردنی C#.</li>
+                        <li>بەڕێوەبردنی کەناڵەکانی سۆشیاڵ میدیا و کەمپەینی ڕیکلامی ڤیدیۆی Meta.</li>
+                        <li>ئینتەرنێتی کۆمپانیا بۆ FTTH بەرزکردەوە بۆ زیادکردنی بەرهەمداری تیم.</li>
+                        <li>ڕێبەری هاوکاری تەکنیکی لەگەڵ تیمە دەرەکییەکان و گەشەپێدەرانی نێودەوڵەتی کرد.</li>
+                        <li>چاوپێکەوتنی کارمەندی نوێی کرد و بڕوانامەی پێزانین وەرگرت بۆ کاری باش.</li>
+                    </ul>
+                </article>
+
+                <article class="experience-card glass-panel reveal delay-1 magnetic" data-tilt>
+                    <div class="experience-meta">
+                        <span>07/2024 – 09/2024</span>
+                        <strong>هەولێر</strong>
+                    </div>
+                    <h3>ڕاهێنراوی IT</h3>
+                    <h4>حکومەتی هەولێر</h4>
+                    <ul class="lux-list">
+                        <li>سیستەمێکی بەڕێوەبردنی دروستکرد بۆ شوێنکەوتنی ژوورەکانی ئۆفیس، ئامێرەکان و کارمەندان.</li>
+                        <li>چاککردنەوەی کۆمپیوتەر، فۆرماتکردن و گۆڕینی هاردوێری کرد.</li>
+                    </ul>
+                </article>
+
+                <article class="experience-card glass-panel reveal delay-2 magnetic" data-tilt>
+                    <div class="experience-meta">
+                        <span>08/2020 – 06/2024</span>
+                        <strong>هەولێر</strong>
+                    </div>
+                    <h3>یاریدەدەری فرۆشتن</h3>
+                    <h4>کۆمپانیای قەڵەم</h4>
+                    <ul class="lux-list">
+                        <li>لە ژینگەی تیمدا کاری کرد و تێگەیشتنی باشی لە پێویستییەکانی کڕیار بەدەستهێنا.</li>
+                        <li>بەهۆی جێباوەڕی و ئەخلاقی کاری بەهێز گوازرایەوە بۆ کاری فاکتۆری.</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+    <!-- Experience End -->
+
+    <!-- Projects Start -->
+    <section class="section-padding" id="projects">
+        <div class="container">
+            <div class="section-heading text-center reveal">
+                <span class="section-kicker">پڕۆژەکان</span>
+                <h2>پڕۆژەکان کە بیرکردنەوەی سوودبەخش پیشان دەدەن، نەک تەنها کۆد.</h2>
+            </div>
+
+            <div class="project-grid">
+                <article class="project-card glass-panel reveal magnetic" data-tilt>
+                    <div class="project-number">01</div>
+                    <i class="fa-solid fa-id-card-clip"></i>
+                    <h3>سیستەمی ئۆتۆماتیکی تۆمارکردنی قوتابی</h3>
+                    <p>پلاتفۆرمی وێب بۆ وەرگرتنی کۆلێژ کە تۆمارکردنی قوتابی نوێ ئۆتۆماتیک دەکات و ناسنامەی دیجیتاڵی لەگەڵ QR Code تایبەت دروست دەکات.</p>
+                    <div class="project-tags"><span>وێب</span><span>QR</span><span>وەرگرتن</span></div>
+                </article>
+
+                <article class="project-card glass-panel reveal delay-1 magnetic" data-tilt>
+                    <div class="project-number">02</div>
+                    <i class="fa-solid fa-car"></i>
+                    <h3>سیستەمی بەڕێوەبردنی ئۆتۆمبێل و خاوەنەکەی</h3>
+                    <p>ئەپی دێسکتۆپی C# بە شێوەی ئافلاین و پارێزراو بۆ Rawa Auto Auction بۆ تۆمارکردنی ئۆتۆمبێل و بەڕێوەبردنی زانیاری خاوەنەکان.</p>
+                    <div class="project-tags"><span>C#</span><span>دێسکتۆپ</span><span>ئامرازی ناوخۆیی</span></div>
+                </article>
+
+                <article class="project-card glass-panel reveal delay-2 magnetic" data-tilt>
+                    <div class="project-number">03</div>
+                    <i class="fa-solid fa-calculator"></i>
+                    <h3>حیسابکەری تێچووی گواستنەوەی ئۆتۆمبێل</h3>
+                    <p>ئەپلیکەیشنی وێبی تاک-پەڕە کە تێچووی وردی گواستنەوەی ئۆتۆمبێل بەپێی گۆڕاوە لۆجستیکییەکان حیساب دەکات.</p>
+                    <div class="project-tags"><span>ئەپی وێب</span><span>حیسابکەر</span><span>بزنس</span></div>
+                </article>
+
+                <article class="project-card glass-panel reveal delay-3 magnetic" data-tilt>
+                    <div class="project-number">04</div>
+                    <i class="fa-solid fa-heart-pulse"></i>
+                    <h3>ئەپی مۆبایلی حیسابکەری BMI</h3>
+                    <p>ئەپلیکەیشنی مۆبایل کە BMI حیساب دەکات بە بەکارهێنانی ڕەگەز، بەرزی و کێش.</p>
+                    <div class="project-tags"><span>مۆبایل</span><span>Flutter</span><span>تەندروستی</span></div>
+                </article>
+            </div>
+        </div>
+    </section>
+    <!-- Projects End -->
+
+    <!-- Skills Start -->
+    <section class="section-padding section-muted" id="skills">
+        <div class="container">
+            <div class="section-heading text-center reveal">
+                <span class="section-kicker">تواناکان</span>
+                <h2>کۆمەڵە توانایەکی تەکنیکی هاوسەنگ.</h2>
+            </div>
+
+            <div class="skills-console glass-panel reveal">
+                <div class="console-header">
+                    <span></span><span></span><span></span>
+                    <strong>skill_matrix.json</strong>
+                </div>
+
+                <div class="skill-matrix">
+                    <div class="skill-column">
+                        <h3><i class="fa-solid fa-code"></i> بەرنامەنووسی و گەشەپێدان</h3>
+                        <div class="skill-pill">Dart / Flutter</div>
+                        <div class="skill-pill">C#</div>
+                        <div class="skill-pill">Python</div>
+                        <div class="skill-pill">PHP</div>
+                        <div class="skill-pill">MySQL</div>
+                        <div class="skill-pill">Laravel</div>
+                        <div class="skill-pill">Firebase</div>
+                    </div>
+
+                    <div class="skill-column">
+                        <h3><i class="fa-solid fa-network-wired"></i> ژێرخانی IT</h3>
+                        <div class="skill-pill">Docker</div>
+                        <div class="skill-pill">Git & GitHub</div>
+                        <div class="skill-pill">تۆڕی بنەڕەتی</div>
+                        <div class="skill-pill">Point-to-Point</div>
+                        <div class="skill-pill">ڕێکخستنی سێرڤەری Linux</div>
+                        <div class="skill-pill">چاککردنەوەی هاردوێر</div>
+                    </div>
+
+                    <div class="skill-column">
+                        <h3><i class="fa-solid fa-bullhorn"></i> کارکردنی دیجیتاڵ</h3>
+                        <div class="skill-pill">بەڕێوەبردنی سۆشیاڵ میدیا</div>
+                        <div class="skill-pill">ڕیکلامی ڤیدیۆی Meta</div>
+                        <div class="skill-pill">داخڵکردنی داتا</div>
+                        <div class="skill-pill">بەڕێوەبردنی سیستەمەکان</div>
+                        <div class="skill-pill">بڕیاردانی تەکنیکی</div>
+                        <div class="skill-pill">هاوکاری نێوان بەشەکان</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Skills End -->
+
+    <!-- خوێندن و فێربوون Start -->
+    <section class="section-padding" id="education">
+        <div class="container">
+            <div class="section-heading text-center reveal">
+                <span class="section-kicker">خوێندن و فێربوون</span>
+                <h2>هەمیشە دروستکردن، پراکتیککردن و باشترکردن.</h2>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-7 mb-4 mb-lg-0 reveal">
+                    <div class="timeline-card glass-panel h-100">
+                        <div class="timeline-header">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <h3>دیپلۆم لە تەکنەلۆژیای زانیاری</h3>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-date">2023 – 2024</span>
+                            <h4>کۆلێژی تەکنیکی شەقڵاوە</h4>
+                            <p>بە پلەی دووەم لە پۆل دەرچووم و ئاستی ئەکادیمی بەرزم هەبوو.</p>
+                            <ul class="lux-list">
+                                <li>سیستەمی بەڕێوەبردنی کتێبخانە بە C#</li>
+                                <li>یارییەکی سادە بە C#</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 reveal delay-1">
+                    <div class="language-card glass-panel h-100">
+                        <h3><i class="fa-solid fa-language"></i> زمانەکان</h3>
+                        <div class="language-row"><span>کوردی</span><strong>زمانی دایک</strong></div>
+                        <div class="language-row"><span>ئینگلیزی</span><strong>B1</strong></div>
+                        <div class="language-row"><span>عەرەبی</span><strong>A1</strong></div>
+                        <div class="learning-note">
+                            <i class="fa-solid fa-seedling"></i>
+                            <p>سەرنجی فێربوونی ڕۆژانە: Flutter، Laravel، بەستنەوەی Backend، و دروستکردنی پڕۆژەی ڕاستەقینە.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- خوێندن و فێربوون End -->
+
+    <!-- Contact Start -->
+    <section class="section-padding section-muted" id="contact">
+        <div class="container">
+            <div class="section-heading text-center reveal">
+                <span class="section-kicker">پەیوەندی</span>
+                <h2>با کارەکە بە ڕوونی قسە بکات.</h2>
+                <p class="section-subtext">ئەم لینکە خوارەوە بەکاربهێنە بۆ پەیوەندیکردن یان بینینی پڕۆفایلەکانی گەشەپێدانم.</p>
+            </div>
+
+            <div class="contact-grid">
+                <a class="contact-tile glass-panel reveal magnetic" data-tilt href="mailto:dlzarcr55@gmail.com">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>ئیمەیڵ</span>
+                    <strong>dlzarcr55@gmail.com</strong>
+                </a>
+
+                <a class="contact-tile glass-panel reveal delay-1 magnetic" data-tilt href="tel:+9647507354643">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>ژمارەی تەلەفۆن</span>
+                    <strong>+964 750 735 4643</strong>
+                </a>
+
+                <a class="contact-tile glass-panel reveal delay-2 magnetic" data-tilt href="https://github.com/dlzar09" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-github"></i>
+                    <span>GitHub</span>
+                    <strong>github.com/dlzar09</strong>
+                </a>
+
+                <a class="contact-tile glass-panel reveal delay-3 magnetic" data-tilt href="https://www.linkedin.com/in/dilzar-pshtiwan/" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                    <span>LinkedIn</span>
+                    <strong>Dilzar Pshtiwan</strong>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Contact End -->
+
+    <!-- Command Palette -->
+    <div class="command-palette" id="commandPalette" aria-hidden="true">
+        <div class="command-box glass-panel">
+            <button type="button" class="command-close" data-command-close aria-label="داخستنی پانێڵی فەرمان">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <span class="section-kicker">Dilzar Mode</span>
+            <h3>ناوەندی فەرمانی پڕۆفایل</h3>
+            <p>پانێڵێکی کارلێککاری ڕێکخراوە کە توانای تەکنیکی، بیرکردنەوەی ڕێبەری، و ئەزموونی پڕۆژەکانم بە شێوەیەکی پاک و پیشەیی نیشان دەدات.</p>
+            <div class="command-list">
+                <a href="#projects" data-command-close><i class="fa-solid fa-diagram-project"></i> بچۆ بۆ پڕۆژەکان</a>
+                <a href="#experience" data-command-close><i class="fa-solid fa-briefcase"></i> بچۆ بۆ ئەزموون</a>
+                <a href="import/assets/files/Dilzar_Pshtiwan_Jalal.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines"></i> کردنەوەی CV</a>
+                <a href="mailto:dlzarcr55@gmail.com"><i class="fa-solid fa-paper-plane"></i> ناردنی ئیمەیڵ</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Start -->
+    <footer class="footer-section">
+        <div class="container text-center">
+            <a href="#home" class="footer-logo">دڵزار<span>.</span></a>
+            <p>پسپۆڕی IT و سیستەمەکان | سەرکردەی تیمی تەکنیکی</p>
+            <div class="footer-socials">
+                <a href="https://github.com/dlzar09" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                <a href="https://www.facebook.com/dlzar.pshtiwan" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com/in/dilzar-pshtiwan/" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <small>&copy; 2026 دڵزار پشتیوان. هەموو مافەکان پارێزراون.</small>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <a href="#" class="back-to-top" aria-label="گەڕانەوە بۆ سەرەوە"><i class="fa fa-angle-up"></i></a>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="import/assets/js/portfolio.js"></script>
+</body>
+
+</html>
